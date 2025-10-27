@@ -7,7 +7,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
       birthdate: document.getElementById("birthdate").value
    };
 
-   const res = await fetch("http://localhost:4000/api/register", {
+   const res = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -16,4 +16,5 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
    const result = await res.json();
    alert(result.message);
    if (res.ok) window.location.href = "/html/login.html";
+
 });
