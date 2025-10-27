@@ -28,7 +28,7 @@
   let myChart = null;
 
   async function cargarDatos() {
-    const res = await fetch("https://backendcuidado2.onrender.com/api/stats", {
+    const res = await fetch("${process.env.Backend_url}/api/stats", {
       headers: { "Authorization": token }
     });
     const data = await res.json();
@@ -150,3 +150,4 @@
 
 
 </html>
+
