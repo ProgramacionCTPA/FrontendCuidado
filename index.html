@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mi Círculo del Autocuidado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Círculo del Autocuidado</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#circulo">Círculo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="#collage">Collage</a></li>
+                <li class="nav-item"><a class="nav-link" href="/html/encuesta.html">Encuesta</a></li>
+                <li class="nav-item"><a class="nav-link" href="/html/estadisticas.html">Ver estadísticas</a></li>
+                <button id="btnCerrar" onclick="logout()">Cerrar sesión</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header class="text-center text-white py-5 bg-gradient">
+    <h1 class="fw-bold">El Círculo del Autocuidado</h1>
+    <p class="lead">Reflexiona, crea y comparte tu bienestar personal de forma digital</p>
+</header>
+
+<!-- SECCIÓN 1: CÍRCULO -->
+<section id="circulo" class="container py-5">
+    <h2 class="text-primary mb-4 text-center">Mi Círculo Digital del Autocuidado</h2>
+    <p class="text-center mb-4">Representa tus áreas de bienestar: físico, emocional, mental, social y espiritual.</p>
+    <div class="text-center">
+        <img src="/media/circulo1.jpg" alt="Círculo del autocuidado" class="img-fluid shadow-lg rounded">
+    </div>
+</section>
+
+<!-- SECCIÓN 2: VIDEO -->
+<section id="video" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="text-primary mb-4">Video Explicativo</h2>
+        <p>Observa la narración sobre tu propio círculo y lo que representa cada área.</p>
+        <div class="ratio ratio-16x9 mx-auto" style="max-width: 700px;">
+            <iframe src="https://www.youtube.com/embed/CZVRBueUhjo?t=7" title="Video del círculo"
+                    allowfullscreen></iframe>
+
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 3: MAPA INTERACTIVO -->
+<section id="mapa" class="container py-5">
+    <h2 class="text-primary mb-4 text-center">Mapa Interactivo del Autocuidado</h2>
+    <p class="text-center">Explora cada área y descubre acciones concretas para fortalecer tu bienestar.</p>
+
+    <div class="row text-center g-4">
+        <!-- FÍSICO -->
+        <div class="col-md-4">
+            <div class="card h-100 border-primary shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">💪💪💪💪💪Físico</h5>
+                    <p class="card-text">
+                        Dormir bien, hacer ejercicio regularmente, mantener una alimentación balanceada y cuidar la postura.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENTAL -->
+        <div class="col-md-4">
+            <div class="card h-100 border-success shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">💭💭💭💭💭Mental</h5>
+                    <p class="card-text">
+                        Leer, meditar, aprender cosas nuevas, mantener la concentración y desconectarte de las pantallas cuando sea necesario.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMOCIONAL -->
+        <div class="col-md-4">
+            <div class="card h-100 border-warning shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">❤️❤️❤️❤️❤️Emocional</h5>
+                    <p class="card-text">
+                        Expresar tus emociones, cuidar tu autoestima, practicar la gratitud y pedir apoyo cuando lo necesites.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segunda fila -->
+    <div class="row text-center g-4 mt-3">
+        <!-- SOCIAL -->
+        <div class="col-md-6">
+            <div class="card h-100 border-info shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">🤝🤝🤝🤝🤝Social</h5>
+                    <p class="card-text">
+                        Fomentar relaciones positivas, respetar la diversidad, colaborar con otros y mantener una comunicación asertiva.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESPIRITUAL -->
+        <div class="col-md-6">
+            <div class="card h-100 border-secondary shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">🕊️🕊️🕊️🕊️🕊️Espiritual</h5>
+                    <p class="card-text">
+                        Conectar con tus valores, dedicar tiempo a la reflexión, la naturaleza o la meditación, y vivir con propósito y paz interior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECCIÓN 4: COLLAGE -->
+<section id="collage" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="text-primary mb-4">Collage Digital del Autocuidado</h2>
+        <p>Imágenes reales de acciones cotidianas que promueven el bienestar en el colegio.</p>
+        <div class="row g-3">
+            <div class="col-md-3"><img src="/media/uno.jpg" class="img-fluid rounded shadow"></div>
+            <div class="col-md-3"><img src="/media/dos.webp" class="img-fluid rounded shadow"></div>
+            <div class="col-md-3"><img src="/media/tres.jpg" class="img-fluid rounded shadow"></div>
+            <div class="col-md-3"><img src="/media/cuatro.jpg" class="img-fluid rounded shadow"></div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">© 2025 | Proyecto Educativo - Círculo del Autocuidado | Colegio Técnico Profesional de Aserrí</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>

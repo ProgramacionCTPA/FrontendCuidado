@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Autocuidado</title>
+    <link rel="stylesheet" href="/css/encuesta.css">
+</head>
+<body>
+<div class="survey-container">
+    <div class="progress-bar"><div class="progress" id="progress"></div></div>
+    <h2>Encuesta de Autocuidado</h2>
+    <div id="question-container">
+        <p class="question" id="question"></p>
+        <div class="options" id="options"></div>
+    </div>
+    <div class="result" id="result">
+        <h2>Resultado Final</h2>
+        <p class="score" id="score"></p>
+        <p class="recommendation" id="recommendation"></p>
+        <button class="restart-btn" onclick="restartSurvey()">Reiniciar</button>
+    </div>
+    <button onclick="logout()">Cerrar sesión</button>
+</div>
+
+<script src="/js/encuesta.js"></script>
+</body>
+</html>
