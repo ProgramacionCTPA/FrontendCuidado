@@ -5,7 +5,7 @@
     window.location.href = "/html/login.html";
   }
 
-  const res = await fetch("https://backendcuidado2.onrender.com/api/survey/status", {
+  const res = await fetch("${process.env.Backend_url}/api/survey/status", {
     headers: { "Authorization": token }
   });
   const data = await res.json();
@@ -111,7 +111,7 @@ async function showResult() {
   // Guardar resultado en MongoDB
   try {
     const token = localStorage.getItem("token");
-    const res = await fetch("https://backendcuidado2.onrender.com/api/survey/save", {
+    const res = await fetch("${process.env.Backend_url}/api/survey/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -142,3 +142,4 @@ function logout() {
     window.location.href = "/index.html";
 
 }
+
