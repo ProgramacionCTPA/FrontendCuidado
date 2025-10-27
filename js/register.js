@@ -7,7 +7,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
       birthdate: document.getElementById("birthdate").value
    };
 
-   const res = await fetch("https://backendcuidado2.onrender.com/api/register", {
+   const res = await fetch("${process.env.Backend_url}/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
@@ -18,4 +18,5 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
    if (res.ok) window.location.href = "/html/login.html";
 
 });
+
 
