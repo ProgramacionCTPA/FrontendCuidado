@@ -10,13 +10,12 @@ document.addEventListener("scroll", () => {
     document.getElementById("btnCerrar").style.display="none";
   }else{
     document.getElementById("btnCerrar").style.display="inline";
-
   }
-
-  
+    
 })();
 
 function logout() {
     localStorage.removeItem("token");
     window.location.href = "/index.html";
+
 }
