@@ -29,7 +29,7 @@
 
   async function cargarDatos() {
     const API_URL = "https://backendcuidado2.onrender.com";
-    const res = await fetch("${API_URL}/api/stats", {
+    const res = await fetch(`${API_URL}/api/stats`, {
       headers: { "Authorization": token }
     });
     const data = await res.json();
@@ -151,5 +151,6 @@
 
 
 </html>
+
 
 
