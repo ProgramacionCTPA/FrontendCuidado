@@ -1,6 +1,7 @@
+const API_URL = "https://backendcuidado2.onrender.com";
+
 (async () => {
   const token = localStorage.getItem("token");
-  const API_URL = "https://backendcuidado2.onrender.com";
 
   if (!token) {
     alert("Debes iniciar sesión para acceder a la encuesta.");
@@ -160,8 +161,4 @@ function logout() {
     window.location.href = "/index.html";
 
 }
-
-
-
-
 
