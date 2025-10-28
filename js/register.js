@@ -10,16 +10,16 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
    };
 
    try {
-      const res = await fetch(`${API_URL}/api/register`, { // 👈 ojo aquí
+      const res = await fetch(`${API_URL}/api/register`, {
          method: "POST",
          headers: { "Content-Type": "application/json" },
          body: JSON.stringify(data)
       });
 
-      const text = await res.text(); // lee como texto primero
+      const text = await res.text();
       let result;
       try {
-         result = JSON.parse(text); // intenta parsear JSON
+         result = JSON.parse(text);
       } catch {
          console.error("Respuesta no JSON:", text);
          throw new Error("Respuesta no válida del servidor");
@@ -32,3 +32,4 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
       alert("No se pudo conectar con el servidor.");
    }
 });
+
