@@ -112,23 +112,38 @@ async function showResult() {
   recommendationEl.textContent = message;
 
   // Guardar resultado en MongoDB
+  await saveSurvey(score, level, message);
+}
+
+async function saveSurvey(score, level, recommendation) {
   try {
     const token = localStorage.getItem("token");
+    if (!token) throw new Error("Usuario no autenticado");
+
     const res = await fetch(`${API_URL}/api/survey/save`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": token
+        "Authorization": `Bearer ${token}`
       },
-      body: JSON.stringify({ score, level, recommendation: message })
+      body: JSON.stringify({ score, level, recommendation })
     });
 
     const data = await res.json();
-    if (!res.ok) alert(data.message);
+    console.log("Respuesta del backend:", data);
+
+    if (!res.ok) {
+      alert(data.message);
+      return;
+    }
+
+    alert("Encuesta guardada correctamente ✅");
   } catch (error) {
-    console.error("Error al guardar resultado:", error);
+    console.error("Error al guardar encuesta:", error);
+    alert("Ocurrió un error al guardar la encuesta");
   }
 }
+
 
 function restartSurvey() {
     score = 0;
@@ -145,6 +160,7 @@ function logout() {
     window.location.href = "/index.html";
 
 }
+
 
 
 
