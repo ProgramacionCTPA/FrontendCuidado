@@ -8,7 +8,8 @@
   }
 
   const res = await fetch(`${API_URL}/api/survey/status`, {
-    headers: { "Authorization": token }
+    headers: {"Authorization": `Bearer ${token}` }
+
   });
   const data = await res.json();
 
@@ -144,6 +145,7 @@ function logout() {
     window.location.href = "/index.html";
 
 }
+
 
 
 
